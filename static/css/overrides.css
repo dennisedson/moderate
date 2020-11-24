@@ -1,0 +1,21 @@
+.button {
+  background-color: #00a4bd;
+  border-color: #00a4bd;
+}
+#counter,
+#navigation a {
+  color: #00a4bd;
+}
+
+.second li:first-of-type::before {
+  counter-set: chapter 2 !important;
+}
+.third li:first-of-type::before {
+  counter-set: chapter 3 !important;
+}
+
+.second li::before,
+.third li::before {
+  content: counter(chapter) ". " !important;
+  counter-increment: chapter !important;
+}
